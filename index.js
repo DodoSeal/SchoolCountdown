@@ -2,10 +2,10 @@ let counter = document.getElementById('counter');
 
 function count() {
     let now = Date.now();
-    let schoolEnd = 1717189200000;
+    let schoolEnd = 1727884800000;
     let difference = schoolEnd - now;
 
-    if (now == schoolEnd) {
+    if (now >= schoolEnd) {
         counter.innerText = "0 DAYS!";
         return;
     };

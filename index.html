@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Countdown</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script type="module" src="./index.js"></script>
 </head>
-<body class="bg-slate-900">
+<body class="bg-slate-900 flex items-center place-content-center">
     <div class="w-screen h-screen flex items-center place-content-center flex-col">
-        <h1 class="text-green-500 text-center font-semibold text-[5rem]" id="counter">{days} {hours} {minutes} {seconds}</h1>
-        <!--<h1 class="text-white text-center font-semibold text-[2.5rem]">Until School Ends!</h1>-->
+        <h1 id="counter" class="text-white text-center font-semibold text-[5rem] select-none"></h1>
+        <h1 id="subheader" class="text-white text-center font-semibold text-[2.5rem] select-none">Until School Ends!</h1>
     </div>
+
+    <div class="absolute flex items-center place-content-center w-[12rem] h-[8rem] bottom-0">
+        <input hidden id="allow-notifications" type="button" value="Allow Notifications" class="transition-colors w-[10rem] h-[3rem] cursor-pointer border-2 border-blue-900 hover:bg-blue-900 text-white">
+    </div>
+
+    <script src="./confetti.browser.js"></script>
+    <script src="./index.js"></script>
 </body>
 </html>
